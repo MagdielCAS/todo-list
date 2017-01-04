@@ -1,7 +1,11 @@
-<div layout="row">
-    <div flex="20">
+<div  layout="column"  ng-cloak="" >
+    <section layout="row" flex="">
+     <md-sidenav flex="20" class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+      <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">New Task</h1>
+      </md-toolbar>
+      <md-content layout-padding="">
         <!--Sidebar content-->
-
         <div layout="column">
             <div>
                 <h4>New TODO</h4>
@@ -18,24 +22,28 @@
                 
             </div>
         </div>
-    </div>
-    <div flex="80" layout layout-wrap layout-sm="column" layout-xs="column">
-        <!--Body content-->
-        
-        <div flex="50" flex-sm="100" flex-xs="100" class="container" 
-         ng-repeat="item in $ctrl.itens">
-            <md-card>
-                <h2>{{item.title}}</h2>
-                <md-card-content>
-                    <p>{{item.content}}</p>
-                </md-card-content>
-                <md-card-actions layout="row" layout-align="end center">
-                    <md-button ng-click="$ctrl.resolve(item)">Resolve</md-button>
-                    <md-button class="md-primary md-raised" ng-click="$ctrl.showCustom($event,item,$ctrl.itens,$ctrl.editedItem)">Edit</md-button>
-                </md-card-actions>
-            </md-card>
+      </md-content>
+    </md-sidenav>
+    <md-content flex="80" layout-padding="" class="container" >
+        <div layout layout-wrap layout-sm="column" layout-xs="column">
+            <!--Body content-->
+            
+            <div flex="50" flex-sm="100" flex-xs="100" 
+            ng-repeat="item in $ctrl.itens">
+                <md-card>
+                    <h2>{{item.title}}</h2>
+                    <md-card-content>
+                        <p>{{item.content}}</p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="$ctrl.resolve(item)">Resolve</md-button>
+                        <md-button class="md-primary md-raised" ng-click="$ctrl.showCustom($event,item,$ctrl.itens,$ctrl.editedItem)">Edit</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
         </div>
-    </div>
+    </md-content>
+</section>
 </div>
 
 
