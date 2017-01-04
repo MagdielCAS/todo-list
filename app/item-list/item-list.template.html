@@ -31,8 +31,11 @@
                 </md-card-content>
                 <md-card-actions layout="row" layout-align="end center">
                     <md-button ng-click="$ctrl.resolve(item)">Resolve</md-button>
+                    <md-button class="md-primary md-raised" ng-click="$ctrl.showCustom($event,item,$ctrl.itens,$ctrl.editedItem)">Edit</md-button>
                 </md-card-actions>
             </md-card>
         </div>
     </div>
 </div>
+
+
