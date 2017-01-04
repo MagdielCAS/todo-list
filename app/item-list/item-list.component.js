@@ -10,7 +10,6 @@ angular.
         {
             title: 'Todo list',
             content: 'testando lista',
-            age: 1
         }
         ];
 
@@ -19,7 +18,6 @@ angular.
         this.newItem = {
             title: '',
             content: '',
-            age: this.itens.length + 1
         };
 
         this.addItem = function(newItem){
@@ -28,8 +26,12 @@ angular.
             this.newItem = {
                 title: '',
                 content: '',
-                age: this.itens.length + 1
             };
+        };
+
+        this.resolve = function(item){
+            var index = this.itens.indexOf(item);
+            index!=-1?this.itens.splice(index, 1):console.log("nao existe no array");
         };
 
       }

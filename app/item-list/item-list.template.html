@@ -1,7 +1,7 @@
 <div layout="row">
     <div flex="20">
         <!--Sidebar content-->
-        
+
         <div layout="column">
             <div>
                 <h4>New TODO</h4>
@@ -29,6 +29,9 @@
                 <md-card-content>
                     <p>{{item.content}}</p>
                 </md-card-content>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button ng-click="$ctrl.resolve(item)">Resolve</md-button>
+                </md-card-actions>
             </md-card>
         </div>
     </div>
