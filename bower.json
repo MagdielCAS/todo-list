@@ -1,10 +1,10 @@
 {
-  "name": "angular-phonecat",
+  "name": "todo-list",
   "description": "A starter project for AngularJS",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
-  "license": "MIT",
-  "private": true,
+  "homepage": "https://github.com/MagdielCAS/todo-list",
+  "license": "none",
+  "private": false,
   "dependencies": {
     "angular": "1.5.x",
     "angular-mocks": "1.5.x",

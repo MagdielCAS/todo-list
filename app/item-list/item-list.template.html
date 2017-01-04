@@ -1,0 +1,35 @@
+<div layout="row">
+    <div flex="20">
+        <!--Sidebar content-->
+        
+        <div layout="column">
+            <div>
+                <h4>New TODO</h4>
+                <md-input-container>
+                    <label>Title:</label>
+                    <input ng-model="$ctrl.newItem.title" />
+                </md-input-container>
+                <md-input-container>
+                    <label>Content:</label>
+                    <input ng-model="$ctrl.newItem.content" />
+                </md-input-container>
+                
+                <md-button class="md-raised" ng-click="$ctrl.addItem($ctrl.newItem)">Add</md-button>
+                
+            </div>
+        </div>
+    </div>
+    <div flex="80" layout layout-wrap layout-sm="column" layout-xs="column">
+        <!--Body content-->
+        
+        <div flex="50" flex-sm="100" flex-xs="100" class="container" 
+         ng-repeat="item in $ctrl.itens">
+            <md-card>
+                <h2>{{item.title}}</h2>
+                <md-card-content>
+                    <p>{{item.content}}</p>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+</div>
