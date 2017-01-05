@@ -10,14 +10,14 @@
             <div>
                 <md-input-container>
                     <label>Title:</label>
-                    <input ng-model="$ctrl.newItem.title" />
+                    <input ng-model="vm.newItem.title" />
                 </md-input-container>
                 <md-input-container>
                     <label>Content:</label>
-                    <input ng-model="$ctrl.newItem.content" />
+                    <input ng-model="vm.newItem.content" />
                 </md-input-container>
                 
-                <md-button class="md-raised" ng-click="$ctrl.addItem($ctrl.newItem)">Add</md-button>
+                <md-button class="md-raised" ng-click="vm.addItem(vm.newItem)">Add</md-button>
                 
             </div>
         </div>
@@ -28,15 +28,15 @@
             <!--Body content-->
             
             <div flex="50" flex-sm="100" flex-xs="100" 
-            ng-repeat="item in $ctrl.itens">
+            ng-repeat="item in vm.itens">
                 <md-card>
                     <h2>{{item.title}}</h2>
                     <md-card-content>
                         <p>{{item.content}}</p>
                     </md-card-content>
                     <md-card-actions layout="row" layout-align="end center">
-                        <md-button ng-click="$ctrl.resolve(item)">Resolve</md-button>
-                        <md-button class="md-primary md-raised" ng-click="$ctrl.showCustom($event,item,$ctrl.itens,$ctrl.editedItem)">Edit</md-button>
+                        <md-button ng-click="vm.resolve(item)">Resolve</md-button>
+                        <md-button class="md-primary md-raised" ng-click="vm.showCustom($event,item,vm.itens,vm.editedItem)">Edit</md-button>
                     </md-card-actions>
                 </md-card>
             </div>

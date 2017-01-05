@@ -14,11 +14,11 @@
       <div class="md-dialog-content">
         <md-input-container>
             <label>Title:</label>
-            <input ng-model="$ctrl.editedItem.title" />
+            <input ng-model="dlg.editedItem.title" />
         </md-input-container>
         <md-input-container>
             <label>Content:</label>
-            <input ng-model="$ctrl.editedItem.content" />
+            <input ng-model="dlg.editedItem.content" />
         </md-input-container>
       </div>
     </md-dialog-content>
@@ -28,7 +28,7 @@
       <md-button ng-click="dlg.cancel()">
        Cancel
       </md-button>
-      <md-button ng-click="dlg.answer($ctrl.editedItem)">
+      <md-button ng-click="dlg.answer()">
         Save
       </md-button>
     </md-dialog-actions>
